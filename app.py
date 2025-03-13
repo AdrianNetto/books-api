@@ -47,7 +47,7 @@ def create_book():
   return jsonify(new_book)
 
 @app.route('/books/delete/<int:id>', methods = ['DELETE'])
-def excluir_livro(id):
+def delete_book(id):
   for index, book in enumerate(books):
     if book.get('id') == id:
       del books[index]
